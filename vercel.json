@@ -1,0 +1,25 @@
+{
+ "cleanUrls": true,
+ "rewrites": [
+  {
+   "source": "/api/:path*",
+   "destination": "/api"
+  }
+ ],
+ "functions": {
+  "api/index.js": {
+   "includeFiles": "data/game.json"
+  }
+ },
+ "headers": [
+  {
+   "source": "/(.*)",
+   "headers": [
+    {
+     "key": "X-Content-Type-Options",
+     "value": "nosniff"
+    }
+   ]
+  }
+ ]
+}
