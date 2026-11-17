@@ -40,12 +40,14 @@ function render() {
     <div><label>Kod rejestracji (puste = bez kodu)</label><input id="sCode" value="${esc(s.registrationCode || '')}" autocomplete="off"></div>
     <div><label>Koniec gry (wydarzenie)</label><input id="sEnd" value="${esc(s.gameEndsAt || '')}"></div>
     <div><label>Limit na drużynę (min)</label><input id="sLim" type="number" value="${s.teamTimeLimitMin || ''}"></div>
+    <div><label>Tryb testowy</label><select id="sTest"><option value="0" ${!s.testMode ? 'selected' : ''}>wyłączony</option><option value="1" ${s.testMode ? 'selected' : ''}>WŁĄCZONY (bez blokady startu i GPS)</option></select></div>
     <div style="flex:0 0 auto"><button id="bSave">Zapisz ustawienia</button></div>
   </div></div>
+  ${s.testMode ? `<div class="gs-msg gs-err">Tryb testowy jest włączony: gra działa przed startem, a potwierdzenie obecności przechodzi z dowolnego miejsca. <a href="/" target="_blank">Otwórz grę</a>, zarejestruj drużynę testową, a po testach usuń ją w zakładce Drużyny i wyłącz tryb testowy przed wydarzeniem.</div>` : ''}
   <div class="gs-tabs"><button data-t="druzyny">Drużyny (${D.teams.length})</button><button data-t="ranking">Ranking</button><button data-t="log">Dziennik</button><button data-t="zadania">Zadania i punkty</button></div>
   <div id="tab"></div>`;
   document.querySelectorAll('[data-t]').forEach(b => { b.classList.toggle('gs-active', b.dataset.t === TAB); b.onclick = () => { TAB = b.dataset.t; NOTE = ''; render(); }; });
-  $('#bSave').onclick = async () => { await act(() => api('/api/admin/settings', { mode: $('#sMode').value, registrationOpen: $('#sReg').value === '1', gameOpen: $('#sOpen').value === '1', gameStartsAt: $('#sStart').value.trim() || null, registrationCode: $('#sCode').value.trim(), gameEndsAt: $('#sEnd').value.trim() || null, teamTimeLimitMin: Number($('#sLim').value) || null }), 'Zapisano ustawienia.'); };
+  $('#bSave').onclick = async () => { await act(() => api('/api/admin/settings', { mode: $('#sMode').value, registrationOpen: $('#sReg').value === '1', gameOpen: $('#sOpen').value === '1', gameStartsAt: $('#sStart').value.trim() || null, registrationCode: $('#sCode').value.trim(), gameEndsAt: $('#sEnd').value.trim() || null, teamTimeLimitMin: Number($('#sLim').value) || null, testMode: $('#sTest').value === '1' }), 'Zapisano ustawienia.'); };
   const tab = $('#tab');
   if (TAB === 'druzyny') {
     tab.innerHTML = `<p><a class="gs-btn" id="gsCsv" href="${esc(CFG.exportUrl || '#')}">Pobierz wyniki (CSV / Excel)</a></p>` + D.teams.map(tm => `

@@ -207,6 +207,7 @@ function openPoint(id, refresh) {
     <div id="pmsg">${refresh && flash ? '' : ''}</div>
     ${needCheck ? `<div class="gs-card" style="margin-top:12px"><h3>Potwierdźcie obecność</h3>
       <p class="gs-muted">Telefon poprosi o zgodę na lokalizację. Musicie być w promieniu ${p.radius} m od punktu.</p>
+      ${PUB.settings.testMode ? '<button id="bTest" class="gs-navy" style="margin-bottom:8px">🧪 Potwierdź (tryb testowy, bez GPS)</button>' : ''}
       <button id="bGps">📍 Jestem na miejscu</button>
       <details style="margin-top:10px"><summary class="gs-muted">GPS nie działa? Wpiszcie kod miejsca</summary>
       <form id="fCode" class="gs-row" style="margin-top:8px"><input name="c" placeholder="Kod miejsca (od organizatora)" autocomplete="off"><button type="submit" class="gs-navy" style="flex:0 0 auto">Potwierdź</button></form></details></div>` : ''}
@@ -227,6 +228,8 @@ function openPoint(id, refresh) {
     }, err => { bg.disabled = false; bg.textContent = '📍 Jestem na miejscu'; $('#pmsg').innerHTML = msg('err', err.code === 1 ? 'Brak zgody na lokalizację. Włączcie ją w ustawieniach przeglądarki albo użyjcie kodu miejsca.' : 'Nie udało się ustalić położenia. Wyjdźcie na otwartą przestrzeń i spróbujcie ponownie.'); },
     { enableHighAccuracy: true, timeout: 20000, maximumAge: 5000 });
   };
+  const bt = $('#bTest');
+  if (bt) bt.onclick = async () => { try { const r = await api('/api/team/checkin', { pointId: p.id, test: true }); ME = r; flash = ['ok', r.message]; render(); } catch (e) { $('#pmsg').innerHTML = msg('err', e.message); } };
   const fc = $('#fCode');
   if (fc) fc.onsubmit = async e => { e.preventDefault(); try { const r = await api('/api/team/checkin', { pointId: p.id, code: fc.c.value }); ME = r; flash = ['ok', r.message]; render(); } catch (er) { $('#pmsg').innerHTML = msg('err', er.message); } };
 }

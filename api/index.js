@@ -155,7 +155,7 @@ function startsLabel() {
 }
 function gameClosedFor(tm) {
   const start = ts(S('gameStartsAt'));
-  if (start && now() < start) return 'Gra rusza ' + startsLabel() + '. Do zobaczenia!';
+  if (start && now() < start && !S('testMode', false)) return 'Gra rusza ' + startsLabel() + '. Do zobaczenia!';
   if (!S('gameOpen', false)) return 'Gra jest obecnie zamknięta.';
   if (S('mode') === 'event') {
     const end = ts(S('gameEndsAt'));
@@ -210,6 +210,7 @@ function publicPoint(p, tm) {
 function publicSettings() {
   const s = S(), o = {};
   for (const k of ['title', 'subtitle', 'mode', 'registrationOpen', 'gameOpen', 'maxTeamSize', 'minTeamSize', 'teamTimeLimitMin', 'gameStartsAt', 'gameEndsAt', 'requiredSelfPoints', 'checkinPoints', 'finishBonus', 'contact']) o[k] = s[k] !== undefined ? s[k] : null;
+  o.testMode = !!s.testMode; if (o.testMode) o.gameStartsAt = null;
   o.startsLabel = startsLabel(); o.needsRegCode = !!s.registrationCode; o.serverTime = nowIso();
   return o;
 }
@@ -295,16 +296,18 @@ async function teamAction(action, req, b) {
       if (await rateLimited('code' + tm.id, 30, 3600)) throw new GsError('Za dużo prób kodu. Zgłoście się do organizatora.', 429);
       if (!p.placeCode || normalize(b.code) !== normalize(p.placeCode)) { log('checkin-bad-code', tm.id, p.id); throw new GsError('Niepoprawny kod miejsca.'); }
       entry = { at: nowIso(), method: 'code' };
+    } else if (S('testMode', false) && b.test) {
+      entry = { at: nowIso(), method: 'test' };
     } else {
       const lat = parseFloat(b.lat), lng = parseFloat(b.lng);
       const acc = Math.min(parseFloat(b.accuracy) || 0, 100);
       if (!isFinite(lat) || !isFinite(lng) || (!lat && !lng)) throw new GsError('Brak położenia GPS.');
       const d = distanceM(lat, lng, +p.lat, +p.lng);
-      if (d - acc > radius) {
+      if (d - acc > radius && !S('testMode', false)) {
         log('checkin-far', tm.id, { point: p.id, d: Math.round(d) });
         throw new GsError(`Jesteście ok. ${Math.round(d)} m od punktu. Podejdźcie bliżej (limit ${radius} m) albo użyjcie kodu miejsca.`, 400, { distance: Math.round(d) });
       }
-      entry = { at: nowIso(), method: 'gps', d: Math.round(d), acc: Math.round(acc) };
+      entry = { at: nowIso(), method: d - acc > radius ? 'test' : 'gps', d: Math.round(d), acc: Math.round(acc) };
     }
     const res = await mutateTeam(tm.id, t => { if (t.checkins[p.id]) return false; t.checkins[p.id] = entry; return t; });
     log('checkin', tm.id, p.id);
@@ -419,7 +422,7 @@ R('POST', 'admin/game', async (req, g) => {
 R('POST', 'admin/settings', async (req, b) => {
   requireAdmin(req);
   const g = JSON.parse(JSON.stringify(GAME));
-  for (const k of ['mode', 'registrationOpen', 'gameOpen', 'gameStartsAt', 'gameEndsAt', 'teamTimeLimitMin', 'requiredSelfPoints', 'registrationCode']) if (k in b) g.settings[k] = b[k];
+  for (const k of ['mode', 'registrationOpen', 'gameOpen', 'gameStartsAt', 'gameEndsAt', 'teamTimeLimitMin', 'requiredSelfPoints', 'registrationCode', 'testMode']) if (k in b) g.settings[k] = b[k];
   if (!['event', 'solo'].includes(g.settings.mode)) g.settings.mode = 'event';
   await saveGame(g);
   return { ok: true };
