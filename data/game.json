@@ -1,564 +1,564 @@
 {
-  "settings": {
-    "title": "Staszic w Kielcach",
-    "subtitle": "Zaginiona Mapa Dyrektora. Gra miejska Roku Staszicowskiego 2026",
-    "mode": "event",
-    "registrationOpen": true,
-    "gameOpen": true,
-    "maxTeamSize": 6,
-    "minTeamSize": 2,
-    "teamTimeLimitMin": 180,
-    "gameStartsAt": "2026-11-20T12:00:00+01:00",
-    "gameEndsAt": "2026-11-20T17:00:00+01:00",
-    "requiredSelfPoints": 4,
-    "checkinPoints": 10,
-    "finishBonus": 20,
-    "gpsDefaultRadius": 80,
-    "contact": "Organizator: (uzupełnij telefon dyżurny)",
-    "registrationCode": ""
-  },
-  "animators": {
-    "muzeum": "1816",
-    "sienkiewicza": "1755",
-    "pttk": "1826"
-  },
-  "intro": "Kielce, rok 1816. Stanisław Staszic, Dyrektor Generalny Górnictwa Królestwa Polskiego, sprowadza do Kielc Dyrekcję Górniczą i otwiera w Pałacu Biskupów Krakowskich Szkołę Akademiczno-Górniczą, pierwszą uczelnię techniczną na ziemiach polskich. Dyrektor przygotowuje wielką mapę bogactw Gór Świętokrzyskich: rud żelaza, miedzi, ołowiu i wapienia, z których ma wyrosnąć nowoczesny przemysł. W noc przed wysłaniem mapy do Warszawy ktoś rozrywa ją na kawałki, a fragmenty znikają w czasie. Pojawiają się w miejscach, w których pamięć o Staszicu przetrwała do dziś.\n\nJesteście elewami (uczniami) Szkoły Akademiczno-Górniczej. Wasza ekspedycja ma odnaleźć fragmenty mapy, zdobyć próbki minerałów i zdać egzamin przed Dyrekcją. Musicie odwiedzić trzy punkty z animatorami i co najmniej cztery z sześciu miejsc samodzielnych. Każde dodatkowe miejsce to dodatkowe punkty. Po zaliczeniu wszystkich wymaganych punktów odblokujecie Przysięgę Elewa.",
-  "points": [
+ "settings": {
+  "title": "Staszic w Kielcach",
+  "subtitle": "Zaginiona Mapa Dyrektora. Gra miejska Roku Staszicowskiego 2026",
+  "mode": "event",
+  "registrationOpen": true,
+  "gameOpen": true,
+  "maxTeamSize": 6,
+  "minTeamSize": 2,
+  "teamTimeLimitMin": 180,
+  "gameStartsAt": "2026-11-20T12:00:00+01:00",
+  "gameEndsAt": "2026-11-20T17:00:00+01:00",
+  "requiredSelfPoints": 4,
+  "checkinPoints": 10,
+  "finishBonus": 20,
+  "gpsDefaultRadius": 80,
+  "contact": "Organizator: (uzupełnij telefon dyżurny)",
+  "registrationCode": ""
+ },
+ "animators": {
+  "muzeum": "1816",
+  "sienkiewicza": "1755",
+  "pttk": "1826"
+ },
+ "intro": "Kielce, rok 1816. Stanisław Staszic, Dyrektor Generalny Górnictwa Królestwa Polskiego, sprowadza do Kielc Dyrekcję Górniczą i otwiera w Pałacu Biskupów Krakowskich Szkołę Akademiczno-Górniczą, pierwszą uczelnię techniczną na ziemiach polskich. Dyrektor przygotowuje wielką mapę bogactw Gór Świętokrzyskich: rud żelaza, miedzi, ołowiu i wapienia, z których ma wyrosnąć nowoczesny przemysł. W noc przed wysłaniem mapy do Warszawy ktoś rozrywa ją na kawałki, a fragmenty znikają w czasie. Pojawiają się w miejscach, w których pamięć o Staszicu przetrwała do dziś.\n\nJesteście elewami (uczniami) Szkoły Akademiczno-Górniczej. Wasza ekspedycja ma odnaleźć fragmenty mapy, zdobyć próbki minerałów i zdać egzamin przed Dyrekcją. Musicie odwiedzić trzy punkty z animatorami i co najmniej cztery z sześciu miejsc samodzielnych. Każde dodatkowe miejsce to dodatkowe punkty. Po zaliczeniu wszystkich wymaganych punktów odblokujecie Przysięgę Elewa.",
+ "points": [
+  {
+   "id": "muzeum",
+   "name": "Muzeum Historii Kielc",
+   "category": "obslugiwany",
+   "address": "ul. św. Leonarda 4",
+   "lat": 50.8707,
+   "lng": 20.6302,
+   "radius": 150,
+   "placeCode": "PROBIERZ",
+   "story": "Pracownia probiercza Dyrekcji Górniczej. Zanim ruda trafi do huty, probierz musi sprawdzić, co naprawdę kryje kamień. Dyrektor nie przyjmie elewa, który nie odróżni galeny od zwykłego kamienia.",
+   "tasks": [
     {
-      "id": "muzeum",
-      "name": "Muzeum Historii Kielc",
-      "category": "obslugiwany",
-      "address": "ul. św. Leonarda 4",
-      "lat": 50.8707,
-      "lng": 20.6302,
-      "radius": 150,
-      "placeCode": "PROBIERZ",
-      "story": "Pracownia probiercza Dyrekcji Górniczej. Zanim ruda trafi do huty, probierz musi sprawdzić, co naprawdę kryje kamień. Dyrektor nie przyjmie elewa, który nie odróżni galeny od zwykłego kamienia.",
-      "tasks": [
-        {
-          "id": "muzeum-a",
-          "kind": "animator",
-          "mode": "event",
-          "points": 30,
-          "title": "Laboratorium probierza",
-          "text": "Animator przeprowadzi was przez próbę minerałów: rozpoznajcie 4 próbki po twardości, barwie rysy i ciężarze. Punkty przyzna animator."
-        },
-        {
-          "id": "muzeum-s1",
-          "kind": "answer",
-          "mode": "event",
-          "points": 15,
-          "maxAttempts": 3,
-          "title": "Biała góra",
-          "text": "Na terenie Kielc leży słynny dawny kamieniołom Kadzielnia. Z jakiej skały jest zbudowana?",
-          "answers": [
-            "wapien",
-            "wapienie",
-            "wapien dewonski"
-          ],
-          "match": "contains",
-          "hints": [
-            {
-              "text": "Z tej skały wypala się wapno.",
-              "cost": 3
-            }
-          ]
-        },
-        {
-          "id": "muzeum-s2",
-          "kind": "answer",
-          "mode": "event",
-          "points": 15,
-          "maxAttempts": 3,
-          "title": "Ruda ołowiu",
-          "text": "Najważniejszą rudą ołowiu, wydobywaną m.in. na kieleckiej Karczówce, jest szary, błyszczący minerał o sześciennych kryształach. Jak się nazywa?",
-          "answers": [
-            "galena",
-            "galenit",
-            "blyszcz olowiu"
-          ],
-          "match": "contains",
-          "hints": [
-            {
-              "text": "Zaczyna się na G, a jej nazwa pochodzi z łaciny.",
-              "cost": 3
-            }
-          ]
-        }
-      ],
-      "coordSource": "przybliżone – sprawdzić na miejscu"
+     "id": "muzeum-a",
+     "kind": "animator",
+     "mode": "event",
+     "points": 30,
+     "title": "Laboratorium probierza",
+     "text": "Animator przeprowadzi was przez próbę minerałów: rozpoznajcie 4 próbki po twardości, barwie rysy i ciężarze. Punkty przyzna animator."
     },
     {
-      "id": "sienkiewicza",
-      "name": "Dach przy Sienkiewicza 8 (dawna SP nr 1 im. Staszica)",
-      "category": "obslugiwany",
-      "address": "ul. Sienkiewicza 8 (między Sienkiewicza a św. Leonarda)",
-      "lat": 50.8712,
-      "lng": 20.6308,
-      "radius": 150,
-      "placeCode": "ELEW",
-      "story": "Tu przez lata stała szkoła imienia Staszica. Z wysokości elewowie uczą się miernictwa: górnik, który nie umie czytać terenu, nie znajdzie złoża.",
-      "tasks": [
-        {
-          "id": "sienkiewicza-a",
-          "kind": "animator",
-          "mode": "event",
-          "points": 30,
-          "title": "Lekcja miernictwa na dachu",
-          "text": "Z dachu odszukajcie i nazwijcie obiekty z karty panoramy, a potem wyznaczcie kierunek do Pałacu Biskupów i Kadzielni. Punkty przyzna animator."
-        },
-        {
-          "id": "sienkiewicza-s1",
-          "kind": "answer",
-          "mode": "event",
-          "points": 15,
-          "maxAttempts": 3,
-          "title": "Szkoła pod numerem",
-          "text": "W budynku, który stał w tym miejscu, mieściła się szkoła podstawowa imienia Stanisława Staszica. Jaki miała numer? Podajcie samą cyfrę.",
-          "answers": [
-            "1",
-            "jeden",
-            "nr 1"
-          ],
-          "match": "exact",
-          "hints": [
-            {
-              "text": "To najniższy możliwy numer.",
-              "cost": 3
-            }
-          ]
-        },
-        {
-          "id": "sienkiewicza-s2",
-          "kind": "answer",
-          "mode": "event",
-          "points": 15,
-          "maxAttempts": 3,
-          "title": "Elew",
-          "text": "Jak w czasach Staszica nazywano ucznia Szkoły Akademiczno-Górniczej? (słowo pochodzi z francuskiego élève)",
-          "answers": [
-            "elew",
-            "elewi",
-            "elewa"
-          ],
-          "match": "contains",
-          "hints": [
-            {
-              "text": "To słowo jest w opisie fabuły gry.",
-              "cost": 3
-            }
-          ]
-        }
-      ],
-      "coordSource": "przybliżone – sprawdzić na miejscu"
-    },
-    {
-      "id": "pttk",
-      "name": "PTTK / Informacja Turystyczna, plac Artystów",
-      "category": "obslugiwany",
-      "address": "plac Artystów",
-      "lat": 50.8718,
-      "lng": 20.6343,
-      "radius": 150,
-      "placeCode": "ODZNAKA",
-      "story": "Biuro ekspedycji. Tu elewowie składają z fragmentów mapę zagłębia, które Staszic chciał zamienić w nowoczesny okręg przemysłowy, i dowiadują się, jak zdobyć Odznakę Staszicowską.",
-      "tasks": [
-        {
-          "id": "pttk-a",
-          "kind": "animator",
-          "mode": "event",
-          "points": 30,
-          "title": "Mapa zagłębia",
-          "text": "Ułóżcie na mapie regionu żetony zakładów i miejscowości (np. Białogon, Samsonów, Suchedniów, Miedzianka, Starachowice) i dopasujcie do nich to, co tam wydobywano lub wytapiano. Punkty przyzna animator."
-        },
-        {
-          "id": "pttk-s1",
-          "kind": "answer",
-          "mode": "event",
-          "points": 15,
-          "maxAttempts": 3,
-          "title": "Okręg przemysłowy",
-          "text": "Jak nazywa się historyczny okręg przemysłowy w rejonie Gór Świętokrzyskich, który rozwijał Staszic? Wpiszcie pierwszy człon nazwy (… Okręg Przemysłowy).",
-          "answers": [
-            "staropolski"
-          ],
-          "match": "contains",
-          "hints": [
-            {
-              "text": "Nazwa nawiązuje do dawnej Polski.",
-              "cost": 3
-            }
-          ]
-        },
-        {
-          "id": "pttk-s2",
-          "kind": "answer",
-          "mode": "event",
-          "points": 15,
-          "maxAttempts": 3,
-          "title": "Miedziana góra",
-          "text": "Wieś pod Kielcami, w której od wieków wydobywano rudy miedzi, ma nazwę pochodzącą od tego metalu. Jak się nazywa?",
-          "answers": [
-            "miedzianka"
-          ],
-          "match": "contains",
-          "hints": [
-            {
-              "text": "Miedź → Miedzi…",
-              "cost": 3
-            }
-          ]
-        }
-      ],
-      "coordSource": "przybliżone – sprawdzić na miejscu"
-    },
-    {
-      "id": "palac",
-      "name": "Pałac Biskupów Krakowskich",
-      "category": "samodzielny",
-      "badge": true,
-      "address": "pl. Zamkowy 1",
-      "lat": 50.8691703,
-      "lng": 20.6276062,
-      "radius": 50,
-      "placeCode": "ZADZIK",
-      "story": "W tym pałacu w 1816 r. Staszic ulokował Dyrekcję Górniczą i Szkołę Akademiczno-Górniczą. To tu zaczyna się historia polskich studiów technicznych.",
-      "tasks": [
-        {
-          "id": "palac-obs",
-          "kind": "answer",
-          "mode": "both",
-          "points": 10,
-          "maxAttempts": 3,
-          "title": "Oko elewa",
-          "text": "Stańcie przed główną fasadą pałacu. Ile wież ma pałac? Podajcie liczbę.",
-          "answers": [
-            "__UZUPELNIJ__"
-          ],
-          "match": "exact",
-          "todo": true,
-          "hints": [
-            {
-              "text": "Obejdźcie dziedziniec i spójrzcie na narożniki.",
-              "cost": 3
-            }
-          ]
-        },
-        {
-          "id": "palac-wiedza",
-          "kind": "answer",
-          "mode": "both",
-          "points": 10,
-          "maxAttempts": 3,
-          "title": "Rok otwarcia szkoły",
-          "text": "W którym roku otwarto w Kielcach Szkołę Akademiczno-Górniczą?",
-          "answers": [
-            "1816"
-          ],
-          "match": "exact",
-          "hints": [
-            {
-              "text": "Ten sam rok, w którym w Kielcach powstała Dyrekcja Górnicza. Szukajcie we wstępie gry.",
-              "cost": 3
-            }
-          ]
-        }
-      ],
-      "coordSource": "staszicowskie.pl (Odznaka Staszicowska), OSM way 201180429"
-    },
-    {
-      "id": "lawka",
-      "name": "Ławka Staszicowska w Parku Miejskim",
-      "category": "samodzielny",
-      "badge": true,
-      "address": "Park Miejski im. Stanisława Staszica",
-      "lat": 50.8670282,
-      "lng": 20.6269491,
-      "radius": 25,
-      "placeCode": "PRZESTROGI",
-      "story": "Usiądźcie obok Dyrektora. Staszic był nie tylko urzędnikiem i geologiem, ale też pisarzem politycznym, który ostrzegał Rzeczpospolitą przed upadkiem.",
-      "tasks": [
-        {
-          "id": "lawka-obs",
-          "kind": "answer",
-          "mode": "both",
-          "points": 10,
-          "maxAttempts": 3,
-          "title": "Oko elewa",
-          "text": "Przyjrzyjcie się postaci na ławce. Co Staszic trzyma w ręku (albo co leży obok niego)? Jedno słowo.",
-          "answers": [
-            "__UZUPELNIJ__"
-          ],
-          "match": "contains",
-          "todo": true,
-          "hints": [
-            {
-              "text": "Spójrzcie na dłonie rzeźby.",
-              "cost": 3
-            }
-          ]
-        },
-        {
-          "id": "lawka-wiedza",
-          "kind": "choice",
-          "mode": "both",
-          "points": 10,
-          "maxAttempts": 1,
-          "title": "Ostrzeżenie dla Rzeczypospolitej",
-          "text": "Jak nazywa się dzieło Staszica z 1790 r., w którym ostrzegał przed upadkiem państwa?",
-          "options": [
-            "Przestrogi dla Polski",
-            "Kazania sejmowe",
-            "Monitor",
-            "Pan Tadeusz"
-          ],
-          "answers": [
-            "Przestrogi dla Polski"
-          ],
-          "match": "exact",
-          "hints": []
-        }
-      ],
-      "coordSource": "staszicowskie.pl (Odznaka Staszicowska), OSM node 1905419329"
-    },
-    {
-      "id": "mural",
-      "name": "Mural Staszica",
-      "category": "samodzielny",
-      "badge": true,
-      "address": "ul. Kochanowskiego 14",
-      "lat": 50.8534592,
-      "lng": 20.6302562,
-      "radius": 25,
-      "placeCode": "BUFFON",
-      "story": "Staszic studiował w Paryżu i poznał tam najsłynniejszych przyrodników epoki. To od nich nauczył się patrzeć na góry jak na księgę historii Ziemi.",
-      "tasks": [
-        {
-          "id": "mural-obs",
-          "kind": "answer",
-          "mode": "both",
-          "points": 10,
-          "maxAttempts": 3,
-          "title": "Oko elewa",
-          "text": "Jaki napis (lub jaki rok) widnieje na muralu? Wpiszcie go dokładnie.",
-          "answers": [
-            "__UZUPELNIJ__"
-          ],
-          "match": "contains",
-          "todo": true,
-          "hints": [
-            {
-              "text": "Szukajcie w dolnej części muralu.",
-              "cost": 3
-            }
-          ]
-        },
-        {
-          "id": "mural-wiedza",
-          "kind": "choice",
-          "mode": "both",
-          "points": 10,
-          "maxAttempts": 1,
-          "title": "Paryski mistrz",
-          "text": "Staszic przetłumaczył na polski „Epoki natury” słynnego francuskiego przyrodnika. Kto był autorem?",
-          "options": [
-            "Georges-Louis Buffon",
-            "Isaac Newton",
-            "Karol Darwin",
-            "Maria Skłodowska-Curie"
-          ],
-          "answers": [
-            "Georges-Louis Buffon"
-          ],
-          "match": "exact",
-          "hints": []
-        }
-      ],
-      "coordSource": "staszicowskie.pl (Odznaka Staszicowska), OSM way 1198141633"
-    },
-    {
-      "id": "politechnika",
-      "name": "Posąg Staszica przy Politechnice Świętokrzyskiej",
-      "category": "samodzielny",
-      "badge": true,
-      "address": "al. Tysiąclecia Państwa Polskiego 7",
-      "lat": 50.8787637,
-      "lng": 20.6400276,
-      "radius": 25,
-      "placeCode": "GORNIK",
-      "story": "Kieleckie studia techniczne mają ponad 200 lat tradycji. Dziś Staszic patrzy na studentów politechniki, następców pierwszych elewów.",
-      "tasks": [
-        {
-          "id": "politechnika-obs",
-          "kind": "answer",
-          "mode": "both",
-          "points": 10,
-          "maxAttempts": 3,
-          "title": "Oko elewa",
-          "text": "Przeczytajcie napis na cokole posągu. Jakie słowo stoi na nim zaraz po imieniu i nazwisku (albo jaki rok podano)?",
-          "answers": [
-            "__UZUPELNIJ__"
-          ],
-          "match": "contains",
-          "todo": true,
-          "hints": [
-            {
-              "text": "Obejdźcie cokół dookoła.",
-              "cost": 3
-            }
-          ]
-        },
-        {
-          "id": "politechnika-wiedza",
-          "kind": "answer",
-          "mode": "both",
-          "points": 10,
-          "maxAttempts": 3,
-          "title": "Uczelnia imienia Staszica",
-          "text": "Która krakowska uczelnia techniczna nosi imię Stanisława Staszica? Wystarczy skrót.",
-          "answers": [
-            "agh",
-            "akademia gorniczo-hutnicza",
-            "akademia gorniczo hutnicza"
-          ],
-          "match": "contains",
-          "hints": [
-            {
-              "text": "Skrót ma trzy litery: Górnictwo i Hutnictwo.",
-              "cost": 3
-            }
-          ]
-        }
-      ],
-      "coordSource": "staszicowskie.pl (Odznaka Staszicowska), OSM way 448310529"
-    },
-    {
-      "id": "bialogon",
-      "name": "Białogon: dawna Huta Aleksandra",
-      "category": "samodzielny",
-      "badge": true,
-      "address": "Kielecka Fabryka Pomp „Białogon”, ul. Druckiego-Lubeckiego",
-      "lat": 50.8544616,
-      "lng": 20.5522012,
-      "radius": 100,
-      "placeCode": "HUTA",
-      "story": "Z inicjatywy Staszica w Białogonie powstał zakład hutniczy przetapiający rudy miedzi i ołowiu z okolic Kielc. Dziś działa tu fabryka pomp. To jedno z miejsc, gdzie plan Staszica zamienił się w przemysł.",
-      "tasks": [
-        {
-          "id": "bialogon-obs",
-          "kind": "answer",
-          "mode": "both",
-          "points": 10,
-          "maxAttempts": 3,
-          "title": "Oko elewa",
-          "text": "Odszukajcie tablicę lub zabytkowy element przy zakładzie. Jaki rok jest na niej podany?",
-          "answers": [
-            "__UZUPELNIJ__"
-          ],
-          "match": "contains",
-          "todo": true,
-          "hints": [
-            {
-              "text": "Rozejrzyjcie się przy bramie.",
-              "cost": 3
-            }
-          ]
-        },
-        {
-          "id": "bialogon-wiedza",
-          "kind": "choice",
-          "mode": "both",
-          "points": 10,
-          "maxAttempts": 1,
-          "title": "Imię huty",
-          "text": "Hutę w Białogonie nazwano na cześć ówczesnego władcy Królestwa Polskiego. Którego?",
-          "options": [
-            "Cara Aleksandra I",
-            "Króla Stanisława Augusta",
-            "Napoleona Bonaparte",
-            "Księcia Józefa Poniatowskiego"
-          ],
-          "answers": [
-            "Cara Aleksandra I"
-          ],
-          "match": "exact",
-          "hints": []
-        }
-      ],
-      "coordSource": "staszicowskie.pl (Odznaka Staszicowska), OSM way 478889344"
-    },
-    {
-      "id": "jagiellonska",
-      "name": "Popiersie Staszica przy dawnym „Mechaniku”",
-      "category": "samodzielny",
-      "badge": false,
-      "address": "ul. Jagiellońska",
-      "lat": 50.867,
-      "lng": 20.615,
-      "radius": 150,
-      "placeCode": "KOPERNIK",
-      "story": "Staszic wydawał własne pieniądze na naukę i oświatę. To on ufundował jeden z najsłynniejszych pomników w Warszawie.",
-      "tasks": [
-        {
-          "id": "jagiellonska-obs",
-          "kind": "answer",
-          "mode": "both",
-          "points": 10,
-          "maxAttempts": 3,
-          "title": "Oko elewa",
-          "text": "Z jakiego materiału wykonane jest popiersie (np. brąz, kamień)? Jedno słowo.",
-          "answers": [
-            "__UZUPELNIJ__"
-          ],
-          "match": "contains",
-          "todo": true,
-          "hints": [
-            {
-              "text": "Dotknijcie: zimny metal czy kamień?",
-              "cost": 3
-            }
-          ]
-        },
-        {
-          "id": "jagiellonska-wiedza",
-          "kind": "choice",
-          "mode": "both",
-          "points": 10,
-          "maxAttempts": 1,
-          "title": "Fundator pomnika",
-          "text": "Pomnik którego wielkiego uczonego w Warszawie ufundował Stanisław Staszic?",
-          "options": [
-            "Mikołaja Kopernika",
-            "Adama Mickiewicza",
-            "Fryderyka Chopina",
-            "Jana Kochanowskiego"
-          ],
-          "answers": [
-            "Mikołaja Kopernika"
-          ],
-          "match": "exact",
-          "hints": []
-        }
-      ],
-      "coordSource": "przybliżone – sprawdzić na miejscu"
-    }
-  ],
-  "finalTask": {
-    "id": "final",
-    "kind": "answer",
-    "points": 10,
-    "maxAttempts": 3,
-    "title": "Przysięga Elewa",
-    "text": "Zebraliście fragmenty mapy. Dokończcie dewizę, którą kierował się Staszic: „Być narodowi …”",
-    "answers": [
-      "uzytecznym"
-    ],
-    "match": "contains",
-    "hints": [
+     "id": "muzeum-s1",
+     "kind": "answer",
+     "mode": "event",
+     "points": 15,
+     "maxAttempts": 3,
+     "title": "Biała góra",
+     "text": "Na terenie Kielc leży słynny dawny kamieniołom Kadzielnia. Z jakiej skały jest zbudowana?",
+     "answers": [
+      "wapien",
+      "wapienie",
+      "wapien dewonski"
+     ],
+     "match": "contains",
+     "hints": [
       {
-        "text": "Chodzi o to, by przynosić pożytek.",
-        "cost": 3
+       "text": "Z tej skały wypala się wapno.",
+       "cost": 3
       }
-    ]
+     ]
+    },
+    {
+     "id": "muzeum-s2",
+     "kind": "answer",
+     "mode": "event",
+     "points": 15,
+     "maxAttempts": 3,
+     "title": "Ruda ołowiu",
+     "text": "Najważniejszą rudą ołowiu, wydobywaną m.in. na kieleckiej Karczówce, jest szary, błyszczący minerał o sześciennych kryształach. Jak się nazywa?",
+     "answers": [
+      "galena",
+      "galenit",
+      "blyszcz olowiu"
+     ],
+     "match": "contains",
+     "hints": [
+      {
+       "text": "Zaczyna się na G, a jej nazwa pochodzi z łaciny.",
+       "cost": 3
+      }
+     ]
+    }
+   ],
+   "coordSource": "przybliżone – sprawdzić na miejscu"
+  },
+  {
+   "id": "sienkiewicza",
+   "name": "Dach przy Sienkiewicza 8 (dawna SP nr 1 im. Staszica)",
+   "category": "obslugiwany",
+   "address": "ul. Sienkiewicza 8 (między Sienkiewicza a św. Leonarda)",
+   "lat": 50.8712,
+   "lng": 20.6308,
+   "radius": 150,
+   "placeCode": "ELEW",
+   "story": "Tu przez lata stała szkoła imienia Staszica. Z wysokości elewowie uczą się miernictwa: górnik, który nie umie czytać terenu, nie znajdzie złoża.",
+   "tasks": [
+    {
+     "id": "sienkiewicza-a",
+     "kind": "animator",
+     "mode": "event",
+     "points": 30,
+     "title": "Lekcja miernictwa na dachu",
+     "text": "Z dachu odszukajcie i nazwijcie obiekty z karty panoramy, a potem wyznaczcie kierunek do Pałacu Biskupów i Kadzielni. Punkty przyzna animator."
+    },
+    {
+     "id": "sienkiewicza-s1",
+     "kind": "answer",
+     "mode": "event",
+     "points": 15,
+     "maxAttempts": 3,
+     "title": "Szkoła pod numerem",
+     "text": "W budynku, który stał w tym miejscu, mieściła się szkoła podstawowa imienia Stanisława Staszica. Jaki miała numer? Podajcie samą cyfrę.",
+     "answers": [
+      "1",
+      "jeden",
+      "nr 1"
+     ],
+     "match": "exact",
+     "hints": [
+      {
+       "text": "To najniższy możliwy numer.",
+       "cost": 3
+      }
+     ]
+    },
+    {
+     "id": "sienkiewicza-s2",
+     "kind": "answer",
+     "mode": "event",
+     "points": 15,
+     "maxAttempts": 3,
+     "title": "Elew",
+     "text": "Jak w czasach Staszica nazywano ucznia Szkoły Akademiczno-Górniczej? (słowo pochodzi z francuskiego élève)",
+     "answers": [
+      "elew",
+      "elewi",
+      "elewa"
+     ],
+     "match": "contains",
+     "hints": [
+      {
+       "text": "To słowo jest w opisie fabuły gry.",
+       "cost": 3
+      }
+     ]
+    }
+   ],
+   "coordSource": "przybliżone – sprawdzić na miejscu"
+  },
+  {
+   "id": "pttk",
+   "name": "PTTK / Informacja Turystyczna, plac Artystów",
+   "category": "obslugiwany",
+   "address": "plac Artystów",
+   "lat": 50.8718,
+   "lng": 20.6343,
+   "radius": 150,
+   "placeCode": "ODZNAKA",
+   "story": "Biuro ekspedycji. Tu elewowie składają z fragmentów mapę zagłębia, które Staszic chciał zamienić w nowoczesny okręg przemysłowy, i dowiadują się, jak zdobyć Odznakę Staszicowską.",
+   "tasks": [
+    {
+     "id": "pttk-a",
+     "kind": "animator",
+     "mode": "event",
+     "points": 30,
+     "title": "Mapa zagłębia",
+     "text": "Ułóżcie na mapie regionu żetony zakładów i miejscowości (np. Białogon, Samsonów, Suchedniów, Miedzianka, Starachowice) i dopasujcie do nich to, co tam wydobywano lub wytapiano. Punkty przyzna animator."
+    },
+    {
+     "id": "pttk-s1",
+     "kind": "answer",
+     "mode": "event",
+     "points": 15,
+     "maxAttempts": 3,
+     "title": "Okręg przemysłowy",
+     "text": "Jak nazywa się historyczny okręg przemysłowy w rejonie Gór Świętokrzyskich, który rozwijał Staszic? Wpiszcie pierwszy człon nazwy (… Okręg Przemysłowy).",
+     "answers": [
+      "staropolski"
+     ],
+     "match": "contains",
+     "hints": [
+      {
+       "text": "Nazwa nawiązuje do dawnej Polski.",
+       "cost": 3
+      }
+     ]
+    },
+    {
+     "id": "pttk-s2",
+     "kind": "answer",
+     "mode": "event",
+     "points": 15,
+     "maxAttempts": 3,
+     "title": "Miedziana góra",
+     "text": "Wieś pod Kielcami, w której od wieków wydobywano rudy miedzi, ma nazwę pochodzącą od tego metalu. Jak się nazywa?",
+     "answers": [
+      "miedzianka"
+     ],
+     "match": "contains",
+     "hints": [
+      {
+       "text": "Miedź → Miedzi…",
+       "cost": 3
+      }
+     ]
+    }
+   ],
+   "coordSource": "przybliżone – sprawdzić na miejscu"
+  },
+  {
+   "id": "palac",
+   "name": "Pałac Biskupów Krakowskich",
+   "category": "samodzielny",
+   "badge": true,
+   "address": "pl. Zamkowy 1",
+   "lat": 50.8691703,
+   "lng": 20.6276062,
+   "radius": 50,
+   "placeCode": "ZADZIK",
+   "story": "W tym pałacu w 1816 r. Staszic ulokował Dyrekcję Górniczą i Szkołę Akademiczno-Górniczą. To tu zaczyna się historia polskich studiów technicznych.",
+   "tasks": [
+    {
+     "id": "palac-obs",
+     "kind": "answer",
+     "mode": "both",
+     "points": 10,
+     "maxAttempts": 3,
+     "title": "Oko elewa",
+     "text": "Stańcie przed główną fasadą pałacu. Ile wież ma pałac? Podajcie liczbę.",
+     "answers": [
+      "__UZUPELNIJ__"
+     ],
+     "match": "exact",
+     "todo": true,
+     "hints": [
+      {
+       "text": "Obejdźcie dziedziniec i spójrzcie na narożniki.",
+       "cost": 3
+      }
+     ]
+    },
+    {
+     "id": "palac-wiedza",
+     "kind": "answer",
+     "mode": "both",
+     "points": 10,
+     "maxAttempts": 3,
+     "title": "Rok otwarcia szkoły",
+     "text": "W którym roku otwarto w Kielcach Szkołę Akademiczno-Górniczą?",
+     "answers": [
+      "1816"
+     ],
+     "match": "exact",
+     "hints": [
+      {
+       "text": "Ten sam rok, w którym w Kielcach powstała Dyrekcja Górnicza. Szukajcie we wstępie gry.",
+       "cost": 3
+      }
+     ]
+    }
+   ],
+   "coordSource": "staszicowskie.pl (Odznaka Staszicowska), OSM way 201180429"
+  },
+  {
+   "id": "lawka",
+   "name": "Ławka Staszicowska w Parku Miejskim",
+   "category": "samodzielny",
+   "badge": true,
+   "address": "Park Miejski im. Stanisława Staszica",
+   "lat": 50.8670282,
+   "lng": 20.6269491,
+   "radius": 25,
+   "placeCode": "PRZESTROGI",
+   "story": "Usiądźcie obok Dyrektora. Staszic był nie tylko urzędnikiem i geologiem, ale też pisarzem politycznym, który ostrzegał Rzeczpospolitą przed upadkiem.",
+   "tasks": [
+    {
+     "id": "lawka-obs",
+     "kind": "answer",
+     "mode": "both",
+     "points": 10,
+     "maxAttempts": 3,
+     "title": "Oko elewa",
+     "text": "Przyjrzyjcie się postaci na ławce. Co Staszic trzyma w ręku (albo co leży obok niego)? Jedno słowo.",
+     "answers": [
+      "__UZUPELNIJ__"
+     ],
+     "match": "contains",
+     "todo": true,
+     "hints": [
+      {
+       "text": "Spójrzcie na dłonie rzeźby.",
+       "cost": 3
+      }
+     ]
+    },
+    {
+     "id": "lawka-wiedza",
+     "kind": "choice",
+     "mode": "both",
+     "points": 10,
+     "maxAttempts": 1,
+     "title": "Ostrzeżenie dla Rzeczypospolitej",
+     "text": "Jak nazywa się dzieło Staszica z 1790 r., w którym ostrzegał przed upadkiem państwa?",
+     "options": [
+      "Przestrogi dla Polski",
+      "Kazania sejmowe",
+      "Monitor",
+      "Pan Tadeusz"
+     ],
+     "answers": [
+      "Przestrogi dla Polski"
+     ],
+     "match": "exact",
+     "hints": []
+    }
+   ],
+   "coordSource": "staszicowskie.pl (Odznaka Staszicowska), OSM node 1905419329"
+  },
+  {
+   "id": "mural",
+   "name": "Mural Staszica",
+   "category": "samodzielny",
+   "badge": true,
+   "address": "ul. Kochanowskiego 14",
+   "lat": 50.8534592,
+   "lng": 20.6302562,
+   "radius": 25,
+   "placeCode": "BUFFON",
+   "story": "Staszic studiował w Paryżu i poznał tam najsłynniejszych przyrodników epoki. To od nich nauczył się patrzeć na góry jak na księgę historii Ziemi.",
+   "tasks": [
+    {
+     "id": "mural-obs",
+     "kind": "answer",
+     "mode": "both",
+     "points": 10,
+     "maxAttempts": 3,
+     "title": "Oko elewa",
+     "text": "Jaki napis (lub jaki rok) widnieje na muralu? Wpiszcie go dokładnie.",
+     "answers": [
+      "__UZUPELNIJ__"
+     ],
+     "match": "contains",
+     "todo": true,
+     "hints": [
+      {
+       "text": "Szukajcie w dolnej części muralu.",
+       "cost": 3
+      }
+     ]
+    },
+    {
+     "id": "mural-wiedza",
+     "kind": "choice",
+     "mode": "both",
+     "points": 10,
+     "maxAttempts": 1,
+     "title": "Paryski mistrz",
+     "text": "Staszic przetłumaczył na polski „Epoki natury” słynnego francuskiego przyrodnika. Kto był autorem?",
+     "options": [
+      "Georges-Louis Buffon",
+      "Isaac Newton",
+      "Karol Darwin",
+      "Maria Skłodowska-Curie"
+     ],
+     "answers": [
+      "Georges-Louis Buffon"
+     ],
+     "match": "exact",
+     "hints": []
+    }
+   ],
+   "coordSource": "staszicowskie.pl (Odznaka Staszicowska), OSM way 1198141633"
+  },
+  {
+   "id": "politechnika",
+   "name": "Posąg Staszica przy Politechnice Świętokrzyskiej",
+   "category": "samodzielny",
+   "badge": true,
+   "address": "al. Tysiąclecia Państwa Polskiego 7",
+   "lat": 50.8787637,
+   "lng": 20.6400276,
+   "radius": 25,
+   "placeCode": "GORNIK",
+   "story": "Kieleckie studia techniczne mają ponad 200 lat tradycji. Dziś Staszic patrzy na studentów politechniki, następców pierwszych elewów.",
+   "tasks": [
+    {
+     "id": "politechnika-obs",
+     "kind": "answer",
+     "mode": "both",
+     "points": 10,
+     "maxAttempts": 3,
+     "title": "Oko elewa",
+     "text": "Przeczytajcie napis na cokole posągu. Jakie słowo stoi na nim zaraz po imieniu i nazwisku (albo jaki rok podano)?",
+     "answers": [
+      "__UZUPELNIJ__"
+     ],
+     "match": "contains",
+     "todo": true,
+     "hints": [
+      {
+       "text": "Obejdźcie cokół dookoła.",
+       "cost": 3
+      }
+     ]
+    },
+    {
+     "id": "politechnika-wiedza",
+     "kind": "answer",
+     "mode": "both",
+     "points": 10,
+     "maxAttempts": 3,
+     "title": "Uczelnia imienia Staszica",
+     "text": "Która krakowska uczelnia techniczna nosi imię Stanisława Staszica? Wystarczy skrót.",
+     "answers": [
+      "agh",
+      "akademia gorniczo-hutnicza",
+      "akademia gorniczo hutnicza"
+     ],
+     "match": "contains",
+     "hints": [
+      {
+       "text": "Skrót ma trzy litery: Górnictwo i Hutnictwo.",
+       "cost": 3
+      }
+     ]
+    }
+   ],
+   "coordSource": "staszicowskie.pl (Odznaka Staszicowska), OSM way 448310529"
+  },
+  {
+   "id": "bialogon",
+   "name": "Białogon: dawna Huta Aleksandra",
+   "category": "samodzielny",
+   "badge": true,
+   "address": "Kielecka Fabryka Pomp „Białogon”, ul. Druckiego-Lubeckiego",
+   "lat": 50.8544616,
+   "lng": 20.5522012,
+   "radius": 100,
+   "placeCode": "HUTA",
+   "story": "Z inicjatywy Staszica w Białogonie powstał zakład hutniczy przetapiający rudy miedzi i ołowiu z okolic Kielc. Dziś działa tu fabryka pomp. To jedno z miejsc, gdzie plan Staszica zamienił się w przemysł.",
+   "tasks": [
+    {
+     "id": "bialogon-obs",
+     "kind": "answer",
+     "mode": "both",
+     "points": 10,
+     "maxAttempts": 3,
+     "title": "Oko elewa",
+     "text": "Odszukajcie tablicę lub zabytkowy element przy zakładzie. Jaki rok jest na niej podany?",
+     "answers": [
+      "__UZUPELNIJ__"
+     ],
+     "match": "contains",
+     "todo": true,
+     "hints": [
+      {
+       "text": "Rozejrzyjcie się przy bramie.",
+       "cost": 3
+      }
+     ]
+    },
+    {
+     "id": "bialogon-wiedza",
+     "kind": "choice",
+     "mode": "both",
+     "points": 10,
+     "maxAttempts": 1,
+     "title": "Imię huty",
+     "text": "Hutę w Białogonie nazwano na cześć ówczesnego władcy Królestwa Polskiego. Którego?",
+     "options": [
+      "Cara Aleksandra I",
+      "Króla Stanisława Augusta",
+      "Napoleona Bonaparte",
+      "Księcia Józefa Poniatowskiego"
+     ],
+     "answers": [
+      "Cara Aleksandra I"
+     ],
+     "match": "exact",
+     "hints": []
+    }
+   ],
+   "coordSource": "staszicowskie.pl (Odznaka Staszicowska), OSM way 478889344"
+  },
+  {
+   "id": "jagiellonska",
+   "name": "Popiersie Staszica przy dawnym „Mechaniku”",
+   "category": "samodzielny",
+   "badge": false,
+   "address": "ul. Jagiellońska",
+   "lat": 50.867,
+   "lng": 20.615,
+   "radius": 150,
+   "placeCode": "KOPERNIK",
+   "story": "Staszic wydawał własne pieniądze na naukę i oświatę. To on ufundował jeden z najsłynniejszych pomników w Warszawie.",
+   "tasks": [
+    {
+     "id": "jagiellonska-obs",
+     "kind": "answer",
+     "mode": "both",
+     "points": 10,
+     "maxAttempts": 3,
+     "title": "Oko elewa",
+     "text": "Przeczytajcie napis na tablicy lub cokole popiersia. Jakie słowo (albo jaki rok) stoi zaraz pod imieniem i nazwiskiem Staszica? Wpiszcie je dokładnie.",
+     "answers": [
+      "__UZUPELNIJ__"
+     ],
+     "match": "contains",
+     "todo": true,
+     "hints": [
+      {
+       "text": "Szukajcie liter wykutych lub odlanych pod samym popiersiem.",
+       "cost": 3
+      }
+     ]
+    },
+    {
+     "id": "jagiellonska-wiedza",
+     "kind": "choice",
+     "mode": "both",
+     "points": 10,
+     "maxAttempts": 1,
+     "title": "Fundator pomnika",
+     "text": "Pomnik którego wielkiego uczonego w Warszawie ufundował Stanisław Staszic?",
+     "options": [
+      "Mikołaja Kopernika",
+      "Adama Mickiewicza",
+      "Fryderyka Chopina",
+      "Jana Kochanowskiego"
+     ],
+     "answers": [
+      "Mikołaja Kopernika"
+     ],
+     "match": "exact",
+     "hints": []
+    }
+   ],
+   "coordSource": "przybliżone – sprawdzić na miejscu"
   }
+ ],
+ "finalTask": {
+  "id": "final",
+  "kind": "answer",
+  "points": 10,
+  "maxAttempts": 3,
+  "title": "Przysięga Elewa",
+  "text": "Zebraliście fragmenty mapy. Dokończcie dewizę, którą kierował się Staszic: „Być narodowi …”",
+  "answers": [
+   "uzytecznym"
+  ],
+  "match": "contains",
+  "hints": [
+   {
+    "text": "Chodzi o to, by przynosić pożytek.",
+    "cost": 3
+   }
+  ]
+ }
 }
