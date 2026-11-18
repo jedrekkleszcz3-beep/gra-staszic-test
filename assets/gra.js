@@ -43,6 +43,7 @@ function renderWelcome(view = 'reg', note = '') {
       <li>Drużyny od ${s.minTeamSize} do ${s.maxTeamSize} osób. Startujecie, kiedy chcecie${s.mode === 'event' ? ', a na przejście trasy macie ' + s.teamTimeLimitMin + ' min' : ''}.</li>
       <li>Do ukończenia gry potrzeba: <b>wszystkich punktów z animatorem</b> oraz <b>${s.requiredSelfPoints} z ${PUB.points.filter(p => p.category !== 'obslugiwany').length} punktów samodzielnych</b>. Kolejne punkty to dodatkowe punkty do rankingu.</li>
       <li>Obecność w miejscu potwierdzacie GPS-em telefonu (+${s.checkinPoints} pkt). Potem pokażą się zadania.</li>
+      <li><b>Rozstrzygnięcie gry: o 16:30 w PTTK / Informacji Turystycznej, plac Artystów.</b> Zapraszamy wszystkie drużyny!</li>
       <li>Podpowiedź kosztuje punkty. Za ukończenie gry: +${s.finishBonus} pkt. Przy remisie wygrywa krótszy czas.</li>
     </ul>
     ${PAGES.mapa || PAGES.ranking ? `<p>${PAGES.mapa ? `<a href="${esc(PAGES.mapa)}">Zobacz mapę miejsc →</a>` : ''}${PAGES.mapa && PAGES.ranking ? ' · ' : ''}${PAGES.ranking ? `<a href="${esc(PAGES.ranking)}">Ranking na żywo →</a>` : ''}</p>` : ''}
@@ -120,7 +121,7 @@ function render() {
     $('#gs-root').innerHTML = `
     <div id="flash"></div>
     ${ME.closed ? msg('err', ME.closed) : ''}
-    ${ME.team.finishedAt ? msg('ok', 'Gra ukończona! Gratulacje. Rozwiążcie jeszcze Przysięgę Elewa i zgłoście się do organizatora.') : ''}
+    ${ME.team.finishedAt ? msg('ok', 'Gra ukończona! Gratulacje. Rozwiążcie jeszcze Przysięgę Elewa. Rozstrzygnięcie gry o 16:30 w PTTK (plac Artystów) – zapraszamy!') : ''}
     <div class="gs-progress">
       <div class="gs-box"><b>Punkty z animatorem</b><div>${pr.svcDone} / ${pr.svcTotal}</div><div class="gs-bar"><i style="width:${100 * pr.svcDone / pr.svcTotal}%"></i></div></div>
       <div class="gs-box"><b>Punkty samodzielne</b><div>${pr.selfDone} / ${pr.selfRequired} <span class="gs-muted">(z ${pr.selfTotal})</span></div><div class="gs-bar"><i style="width:${Math.min(100, 100 * pr.selfDone / pr.selfRequired)}%"></i></div></div>
