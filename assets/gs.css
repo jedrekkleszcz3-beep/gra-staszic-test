@@ -126,3 +126,8 @@
 .gs-app tr.gs-top1 td{background:#f6e7c8}.gs-app tr.gs-top2 td{background:#eeeeee}.gs-app tr.gs-top3 td{background:#f2dcc8}
 .gs-in-admin{margin:12px 20px 0 0;padding-bottom:20px}
 .gs-in-admin .gs-main{max-width:1100px;margin:0;padding:16px 0}
+.gs-app .gs-footer{margin:28px 12px 16px;padding:16px 12px;background:#fff;border-radius:12px;text-align:center;color:#3a3a3a;font-size:.9rem;line-height:1.45}
+.gs-app .gs-footer p{margin:0 0 12px}
+.gs-app .gs-footer .gs-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 28px;margin-bottom:14px}
+.gs-app .gs-footer img{display:block;max-width:100%;height:auto}
+.gs-app .gs-footer .gs-l-kielce{width:150px}.gs-app .gs-footer .gs-l-stow{width:240px}.gs-app .gs-footer .gs-l-belka{width:100%;max-width:640px;margin:0 auto}
