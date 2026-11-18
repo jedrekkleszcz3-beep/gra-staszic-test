@@ -9,7 +9,7 @@
   "minTeamSize": 2,
   "teamTimeLimitMin": 180,
   "gameStartsAt": "2026-11-20T12:00:00+01:00",
-  "gameEndsAt": "2026-11-20T17:00:00+01:00",
+  "gameEndsAt": "2026-11-20T16:00:00+01:00",
   "requiredSelfPoints": 4,
   "checkinPoints": 10,
   "finishBonus": 20,
