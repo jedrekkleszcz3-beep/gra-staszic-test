@@ -444,26 +444,6 @@
    "story": "Z inicjatywy Staszica w Białogonie powstał zakład hutniczy przetapiający rudy miedzi i ołowiu z okolic Kielc. Dziś działa tu fabryka pomp. To jedno z miejsc, gdzie plan Staszica zamienił się w przemysł.",
    "tasks": [
     {
-     "id": "bialogon-obs",
-     "kind": "answer",
-     "mode": "both",
-     "points": 10,
-     "maxAttempts": 3,
-     "title": "Oko elewa",
-     "text": "Odszukajcie tablicę lub zabytkowy element przy zakładzie. Jaki rok jest na niej podany?",
-     "answers": [
-      "__UZUPELNIJ__"
-     ],
-     "match": "contains",
-     "todo": true,
-     "hints": [
-      {
-       "text": "Rozejrzyjcie się przy bramie.",
-       "cost": 3
-      }
-     ]
-    },
-    {
      "id": "bialogon-wiedza",
      "kind": "choice",
      "mode": "both",
