@@ -394,15 +394,15 @@
      "points": 10,
      "maxAttempts": 3,
      "title": "Oko elewa",
-     "text": "Przeczytajcie napis na cokole posągu. Jakie słowo stoi na nim zaraz po imieniu i nazwisku (albo jaki rok podano)?",
+     "text": "Staszic z brązu opiera się na lasce, a u jego stóp rzeźbiarz umieścił część maszyny, symbol przemysłu, który budował w Zagłębiu Staropolskim. Co to za element? Wystarczy jedno słowo.",
      "answers": [
-      "__UZUPELNIJ__"
+      "zebat",
+      "tryb"
      ],
      "match": "contains",
-     "todo": true,
      "hints": [
       {
-       "text": "Obejdźcie cokół dookoła.",
+       "text": "Ma zęby, ale nie gryzie. Obraca inne podobne elementy w maszynach.",
        "cost": 3
       }
      ]
