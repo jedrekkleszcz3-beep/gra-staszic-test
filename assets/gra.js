@@ -40,7 +40,7 @@ function renderWelcome(view = 'reg', note = '') {
     <h2>Zasady w skrócie</h2>
     <ul>
       ${beforeStart() ? `<li><b>Gra rusza ${esc(s.startsLabel)}.</b> Drużynę możecie zarejestrować już teraz.</li>` : ''}
-      <li>Drużyny od ${s.minTeamSize} do ${s.maxTeamSize} osób. Startujecie, kiedy chcecie${s.mode === 'event' ? ', a na przejście trasy macie ' + s.teamTimeLimitMin + ' min' : ''}.</li>
+      <li>Drużyny od 1 do ${s.maxTeamSize} osób. Startujecie, kiedy chcecie${s.mode === 'event' ? ', a na przejście trasy macie ' + s.teamTimeLimitMin + ' min' : ''}.</li>
       <li>Do ukończenia gry potrzeba: <b>wszystkich punktów z animatorem</b> oraz <b>${s.requiredSelfPoints} z ${PUB.points.filter(p => p.category !== 'obslugiwany').length} punktów samodzielnych</b>. Kolejne punkty to dodatkowe punkty do rankingu.</li>
       <li>Obecność w miejscu potwierdzacie GPS-em telefonu (+${s.checkinPoints} pkt). Potem pokażą się zadania.</li>
       <li><b>Rozstrzygnięcie gry: o 16:30 w PTTK / Informacji Turystycznej, plac Artystów.</b> Zapraszamy wszystkie drużyny!</li>

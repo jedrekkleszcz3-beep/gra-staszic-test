@@ -268,7 +268,7 @@ R('POST', 'register', async (req, b) => {
   if (!captain) throw new GsError('Podaj imię i nazwisko kapitana.');
   if (!contact) throw new GsError('Podaj telefon lub e-mail kapitana.');
   const all = [captain]; for (const m of members) if (normalize(m) !== normalize(captain)) all.push(m);
-  const min = parseInt(S('minTeamSize', 1), 10), max = parseInt(S('maxTeamSize', 99), 10);
+  const min = 1, max = parseInt(S('maxTeamSize', 99), 10);
   if (all.length < min || all.length > max) throw new GsError(`Drużyna musi liczyć od ${min} do ${max} osób (razem z kapitanem).`);
   if (!b.consent) throw new GsError('Zaakceptuj regulamin i zgodę na przetwarzanie danych.');
   const tm = { id: newId(), name, captain, contact, school: str(b, 'school', 80), members: all, passHash: hashPassword(password), createdAt: nowIso(), startedAt: null, finishedAt: null, tokens: [], checkins: {}, tasks: {}, animator: {}, adjustments: [] };
