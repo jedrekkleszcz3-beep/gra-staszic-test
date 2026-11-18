@@ -285,15 +285,14 @@
      "points": 10,
      "maxAttempts": 3,
      "title": "Oko elewa",
-     "text": "Przyjrzyjcie się postaci na ławce. Co Staszic trzyma w ręku (albo co leży obok niego)? Jedno słowo.",
+     "text": "Ławka ma kształt półkola, a pośrodku stoi obelisk z popiersiem Staszica. Na dole cokołu, w prostokątnej ramce tuż nad siedziskiem, wyryto rok ufundowania pomnika. Jaki to rok?",
      "answers": [
-      "__UZUPELNIJ__"
+      "1906"
      ],
-     "match": "contains",
-     "todo": true,
+     "match": "exact",
      "hints": [
       {
-       "text": "Spójrzcie na dłonie rzeźby.",
+       "text": "Szukajcie czterocyfrowej liczby w ramce na środku, między dwoma skrzydłami ławki.",
        "cost": 3
       }
      ]
