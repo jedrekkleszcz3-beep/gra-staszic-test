@@ -33,15 +33,15 @@
    "lng": 20.6302,
    "radius": 50,
    "placeCode": "PROBIERZ",
-   "story": "Pracownia probiercza Dyrekcji Górniczej. Zanim ruda trafi do huty, probierz musi sprawdzić, co naprawdę kryje kamień. Dyrektor nie przyjmie elewa, który nie odróżni galeny od zwykłego kamienia.",
+   "story": "Pracownia probiercza Dyrekcji Górniczej. Zanim ruda trafi do huty, trzeba wiedzieć, co naprawdę kryje kamień. Dyrektor nie przyjmie elewa, który nie odróżni rudy ołowiu od rudy żelaza.",
    "tasks": [
     {
      "id": "muzeum-a",
      "kind": "animator",
      "mode": "event",
      "points": 30,
-     "title": "Laboratorium probierza",
-     "text": "Animator przeprowadzi was przez próbę minerałów: rozpoznajcie 4 próbki po twardości, barwie rysy i ciężarze. Punkty przyzna animator."
+     "title": "Tajemnice minerałów",
+     "text": "Staszic potrzebuje pomocy w rozpoznaniu surowców niezbędnych do rozwoju przemysłu. Zostajecie młodymi geologami! Dostaniecie kartkę z czterema opisami minerałów: dopasujcie każdy do nazwy minerału i metalu, który się z niego pozyskuje. Punkty przyzna animator (5 pkt za każdy poprawny minerał)."
     },
     {
      "id": "muzeum-s1",
@@ -88,22 +88,22 @@
   },
   {
    "id": "sienkiewicza",
-   "name": "Dach przy Sienkiewicza 8 (dawna SP nr 1 im. Staszica)",
+   "name": "Sienkiewicza 8 (dawna SP nr 1 im. Staszica)",
    "category": "obslugiwany",
    "address": "ul. Sienkiewicza 8 (między Sienkiewicza a św. Leonarda)",
    "lat": 50.8712,
    "lng": 20.6308,
    "radius": 50,
    "placeCode": "ELEW",
-   "story": "Tu przez lata stała szkoła imienia Staszica. Z wysokości elewowie uczą się miernictwa: górnik, który nie umie czytać terenu, nie znajdzie złoża.",
+   "story": "Tu przez lata stała szkoła imienia Staszica. Dziś elewowie zdają tu egzamin: przyszły odkrywca musi mieć wiedzę, umieć znaleźć kierunek i wymyślić coś, co ułatwi ludziom życie.",
    "tasks": [
     {
      "id": "sienkiewicza-a",
      "kind": "animator",
      "mode": "event",
      "points": 30,
-     "title": "Lekcja miernictwa na dachu",
-     "text": "Z dachu odszukajcie i nazwijcie obiekty z karty panoramy, a potem wyznaczcie kierunek do Pałacu Biskupów i Kadzielni. Punkty przyzna animator."
+     "title": "Egzamin młodego Staszica",
+     "text": "W miejscu dawnej szkoły imienia Staszica czeka was egzamin z umiejętności przyszłych odkrywców i inżynierów. Macie 90 sekund na trzy wyzwania: wiedza, orientacja w terenie i kreatywność. Punkty przyzna animator (do 10 pkt za każde wyzwanie)."
     },
     {
      "id": "sienkiewicza-s1",
@@ -157,15 +157,15 @@
    "lng": 20.6343,
    "radius": 50,
    "placeCode": "ODZNAKA",
-   "story": "Biuro ekspedycji. Tu elewowie składają z fragmentów mapę zagłębia, które Staszic chciał zamienić w nowoczesny okręg przemysłowy, i dowiadują się, jak zdobyć Odznakę Staszicowską.",
+   "story": "Biuro ekspedycji. Tu elewowie układają plan zagłębia, które Staszic chciał zamienić w nowoczesny okręg przemysłowy, i dowiadują się, jak zdobyć Odznakę Staszicowską.",
    "tasks": [
     {
      "id": "pttk-a",
      "kind": "animator",
      "mode": "event",
      "points": 30,
-     "title": "Mapa zagłębia",
-     "text": "Ułóżcie na mapie regionu żetony zakładów i miejscowości (np. Białogon, Samsonów, Suchedniów, Miedzianka, Starachowice) i dopasujcie do nich to, co tam wydobywano lub wytapiano. Punkty przyzna animator."
+     "title": "Przemysłowe pary",
+     "text": "Staszic przygotowuje plan rozwoju przemysłu. Na stole leży 12 karteczek: sześć z nazwami miejsc i sześć z surowcami lub zakładami. Połączcie je w pary. Punkty przyzna animator (5 pkt za każdą prawidłową parę)."
     },
     {
      "id": "pttk-s1",
