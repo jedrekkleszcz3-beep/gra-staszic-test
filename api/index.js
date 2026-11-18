@@ -26,7 +26,14 @@ async function rpc(fn, args) {
 let GAME = null;
 async function loadGame() {
   const g = await rpc('gs_cfg_get', { ck: 'game' });
-  if (g && g.settings) { GAME = g; return; }
+  if (g && g.settings) {
+    GAME = g;
+    // punkty z animatorami: tylko zadanie animatora, bez pytań wiedzowych (20.11)
+    let ch = false;
+    for (const p of GAME.points || []) if (['muzeum', 'sienkiewicza', 'pttk'].includes(p.id) && (p.tasks || []).some(t => t.kind !== 'animator')) { p.tasks = p.tasks.filter(t => t.kind === 'animator'); ch = true; }
+    if (ch) await saveGame(GAME);
+    return;
+  }
   GAME = JSON.parse(JSON.stringify(DEFAULT_GAME));
   await rpc('gs_cfg_set', { ck: 'game', v: GAME });
 }

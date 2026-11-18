@@ -42,46 +42,6 @@
      "points": 30,
      "title": "Tajemnice minerałów",
      "text": "Staszic potrzebuje pomocy w rozpoznaniu surowców niezbędnych do rozwoju przemysłu. Zostajecie młodymi geologami! Dostaniecie kartkę z czterema opisami minerałów: dopasujcie każdy do nazwy minerału i metalu, który się z niego pozyskuje. Punkty przyzna animator (7–8 pkt za każdy poprawny minerał, za komplet 30 pkt)."
-    },
-    {
-     "id": "muzeum-s1",
-     "kind": "answer",
-     "mode": "event",
-     "points": 15,
-     "title": "Biała góra",
-     "text": "Na terenie Kielc leży słynny dawny kamieniołom Kadzielnia. Z jakiej skały jest zbudowana?",
-     "answers": [
-      "wapien",
-      "wapienie",
-      "wapien dewonski"
-     ],
-     "match": "contains",
-     "hints": [
-      {
-       "text": "Z tej skały wypala się wapno.",
-       "cost": 3
-      }
-     ]
-    },
-    {
-     "id": "muzeum-s2",
-     "kind": "answer",
-     "mode": "event",
-     "points": 15,
-     "title": "Ruda ołowiu",
-     "text": "Najważniejszą rudą ołowiu, wydobywaną m.in. na kieleckiej Karczówce, jest szary, błyszczący minerał o sześciennych kryształach. Jak się nazywa?",
-     "answers": [
-      "galena",
-      "galenit",
-      "blyszcz olowiu"
-     ],
-     "match": "contains",
-     "hints": [
-      {
-       "text": "Zaczyna się na G, a jej nazwa pochodzi z łaciny.",
-       "cost": 3
-      }
-     ]
     }
    ],
    "coordSource": "przybliżone – sprawdzić na miejscu"
@@ -104,46 +64,6 @@
      "points": 30,
      "title": "Egzamin młodego Staszica",
      "text": "W miejscu dawnej szkoły imienia Staszica czeka was egzamin z umiejętności przyszłych odkrywców i inżynierów. Macie 90 sekund na trzy wyzwania: wiedza, orientacja w terenie i kreatywność. Punkty przyzna animator (do 10 pkt za każde wyzwanie)."
-    },
-    {
-     "id": "sienkiewicza-s1",
-     "kind": "answer",
-     "mode": "event",
-     "points": 15,
-     "title": "Szkoła pod numerem",
-     "text": "W budynku, który stał w tym miejscu, mieściła się szkoła podstawowa imienia Stanisława Staszica. Jaki miała numer? Podajcie samą cyfrę.",
-     "answers": [
-      "1",
-      "jeden",
-      "nr 1"
-     ],
-     "match": "exact",
-     "hints": [
-      {
-       "text": "To najniższy możliwy numer.",
-       "cost": 3
-      }
-     ]
-    },
-    {
-     "id": "sienkiewicza-s2",
-     "kind": "answer",
-     "mode": "event",
-     "points": 15,
-     "title": "Elew",
-     "text": "Jak w czasach Staszica nazywano ucznia Szkoły Akademiczno-Górniczej? (słowo pochodzi z francuskiego élève)",
-     "answers": [
-      "elew",
-      "elewi",
-      "elewa"
-     ],
-     "match": "contains",
-     "hints": [
-      {
-       "text": "To słowo jest w opisie fabuły gry.",
-       "cost": 3
-      }
-     ]
     }
    ],
    "coordSource": "przybliżone – sprawdzić na miejscu"
@@ -166,42 +86,6 @@
      "points": 30,
      "title": "Przemysłowe pary",
      "text": "Staszic przygotowuje plan rozwoju przemysłu. Na stole leży 12 karteczek: sześć z nazwami miejsc i sześć z surowcami lub zakładami. Połączcie je w pary. Punkty przyzna animator (5 pkt za każdą prawidłową parę)."
-    },
-    {
-     "id": "pttk-s1",
-     "kind": "answer",
-     "mode": "event",
-     "points": 15,
-     "title": "Okręg przemysłowy",
-     "text": "Jak nazywa się historyczny okręg przemysłowy w rejonie Gór Świętokrzyskich, który rozwijał Staszic? Wpiszcie pierwszy człon nazwy (… Okręg Przemysłowy).",
-     "answers": [
-      "staropolski"
-     ],
-     "match": "contains",
-     "hints": [
-      {
-       "text": "Nazwa nawiązuje do dawnej Polski.",
-       "cost": 3
-      }
-     ]
-    },
-    {
-     "id": "pttk-s2",
-     "kind": "answer",
-     "mode": "event",
-     "points": 15,
-     "title": "Miedziana góra",
-     "text": "Wieś pod Kielcami, w której od wieków wydobywano rudy miedzi, ma nazwę pochodzącą od tego metalu. Jak się nazywa?",
-     "answers": [
-      "miedzianka"
-     ],
-     "match": "contains",
-     "hints": [
-      {
-       "text": "Miedź → Miedzi…",
-       "cost": 3
-      }
-     ]
     }
    ],
    "coordSource": "przybliżone – sprawdzić na miejscu"
