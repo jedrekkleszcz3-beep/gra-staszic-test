@@ -177,8 +177,7 @@ function taskHtml(t, p) {
     body = (t.hints || []).map(h => `<div class="gs-hint">💡 ${esc(h)}</div>`).join('');
     body += t.options ? `<div class="gs-opts">${t.options.map(o => `<button type="button" data-opt="${esc(o)}">${esc(o)}</button>`).join('')}</div>`
       : `<form class="gs-ans"><div class="gs-row"><input name="a" placeholder="Wasza odpowiedź" autocomplete="off" required><button type="submit" style="flex:0 0 auto">Sprawdź</button></div></form>`;
-    const left = t.maxAttempts - t.attempts;
-    body += `<p class="gs-muted">Prób: ${left} z ${t.maxAttempts}. Za zadanie: ${t.points} pkt.</p>`;
+    body += `<p class="gs-muted">Za zadanie: ${t.points} pkt.</p>`;
     if (t.hints.length < t.hintsTotal) body += `<button class="gs-ghost" data-hint="1">Weź podpowiedź (−${t.hintCosts[t.hints.length]} pkt)</button>`;
   }
   return `<div class="gs-task" data-task="${t.id}"><h3>${esc(t.title)}</h3><p>${esc(t.text)}</p>${body}<div class="gs-tmsg"></div></div>`;

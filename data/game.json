@@ -13,7 +13,7 @@
   "requiredSelfPoints": 4,
   "checkinPoints": 10,
   "finishBonus": 20,
-  "gpsDefaultRadius": 80,
+  "gpsDefaultRadius": 50,
   "contact": "Organizator: (uzupełnij telefon dyżurny)",
   "registrationCode": ""
  },
@@ -31,7 +31,7 @@
    "address": "ul. św. Leonarda 4",
    "lat": 50.8707,
    "lng": 20.6302,
-   "radius": 150,
+   "radius": 50,
    "placeCode": "PROBIERZ",
    "story": "Pracownia probiercza Dyrekcji Górniczej. Zanim ruda trafi do huty, probierz musi sprawdzić, co naprawdę kryje kamień. Dyrektor nie przyjmie elewa, który nie odróżni galeny od zwykłego kamienia.",
    "tasks": [
@@ -48,7 +48,6 @@
      "kind": "answer",
      "mode": "event",
      "points": 15,
-     "maxAttempts": 3,
      "title": "Biała góra",
      "text": "Na terenie Kielc leży słynny dawny kamieniołom Kadzielnia. Z jakiej skały jest zbudowana?",
      "answers": [
@@ -69,7 +68,6 @@
      "kind": "answer",
      "mode": "event",
      "points": 15,
-     "maxAttempts": 3,
      "title": "Ruda ołowiu",
      "text": "Najważniejszą rudą ołowiu, wydobywaną m.in. na kieleckiej Karczówce, jest szary, błyszczący minerał o sześciennych kryształach. Jak się nazywa?",
      "answers": [
@@ -95,7 +93,7 @@
    "address": "ul. Sienkiewicza 8 (między Sienkiewicza a św. Leonarda)",
    "lat": 50.8712,
    "lng": 20.6308,
-   "radius": 150,
+   "radius": 50,
    "placeCode": "ELEW",
    "story": "Tu przez lata stała szkoła imienia Staszica. Z wysokości elewowie uczą się miernictwa: górnik, który nie umie czytać terenu, nie znajdzie złoża.",
    "tasks": [
@@ -112,7 +110,6 @@
      "kind": "answer",
      "mode": "event",
      "points": 15,
-     "maxAttempts": 3,
      "title": "Szkoła pod numerem",
      "text": "W budynku, który stał w tym miejscu, mieściła się szkoła podstawowa imienia Stanisława Staszica. Jaki miała numer? Podajcie samą cyfrę.",
      "answers": [
@@ -133,7 +130,6 @@
      "kind": "answer",
      "mode": "event",
      "points": 15,
-     "maxAttempts": 3,
      "title": "Elew",
      "text": "Jak w czasach Staszica nazywano ucznia Szkoły Akademiczno-Górniczej? (słowo pochodzi z francuskiego élève)",
      "answers": [
@@ -159,7 +155,7 @@
    "address": "plac Artystów",
    "lat": 50.8718,
    "lng": 20.6343,
-   "radius": 150,
+   "radius": 50,
    "placeCode": "ODZNAKA",
    "story": "Biuro ekspedycji. Tu elewowie składają z fragmentów mapę zagłębia, które Staszic chciał zamienić w nowoczesny okręg przemysłowy, i dowiadują się, jak zdobyć Odznakę Staszicowską.",
    "tasks": [
@@ -176,7 +172,6 @@
      "kind": "answer",
      "mode": "event",
      "points": 15,
-     "maxAttempts": 3,
      "title": "Okręg przemysłowy",
      "text": "Jak nazywa się historyczny okręg przemysłowy w rejonie Gór Świętokrzyskich, który rozwijał Staszic? Wpiszcie pierwszy człon nazwy (… Okręg Przemysłowy).",
      "answers": [
@@ -195,7 +190,6 @@
      "kind": "answer",
      "mode": "event",
      "points": 15,
-     "maxAttempts": 3,
      "title": "Miedziana góra",
      "text": "Wieś pod Kielcami, w której od wieków wydobywano rudy miedzi, ma nazwę pochodzącą od tego metalu. Jak się nazywa?",
      "answers": [
@@ -229,7 +223,6 @@
      "kind": "answer",
      "mode": "both",
      "points": 10,
-     "maxAttempts": 3,
      "title": "Oko elewa",
      "text": "Stańcie przed główną fasadą pałacu. Ile wież ma pałac? Podajcie liczbę.",
      "answers": [
@@ -249,7 +242,6 @@
      "kind": "answer",
      "mode": "both",
      "points": 10,
-     "maxAttempts": 3,
      "title": "Rok otwarcia szkoły",
      "text": "W którym roku otwarto w Kielcach Szkołę Akademiczno-Górniczą?",
      "answers": [
@@ -274,7 +266,7 @@
    "address": "Park Miejski im. Stanisława Staszica",
    "lat": 50.8670282,
    "lng": 20.6269491,
-   "radius": 25,
+   "radius": 50,
    "placeCode": "PRZESTROGI",
    "story": "Usiądźcie obok Dyrektora. Staszic był nie tylko urzędnikiem i geologiem, ale też pisarzem politycznym, który ostrzegał Rzeczpospolitą przed upadkiem.",
    "tasks": [
@@ -283,7 +275,6 @@
      "kind": "answer",
      "mode": "both",
      "points": 10,
-     "maxAttempts": 3,
      "title": "Oko elewa",
      "text": "Ławka ma kształt półkola, a pośrodku stoi obelisk z popiersiem Staszica. Na dole cokołu, w prostokątnej ramce tuż nad siedziskiem, wyryto rok ufundowania pomnika. Jaki to rok?",
      "answers": [
@@ -302,7 +293,6 @@
      "kind": "choice",
      "mode": "both",
      "points": 10,
-     "maxAttempts": 1,
      "title": "Ostrzeżenie dla Rzeczypospolitej",
      "text": "Jak nazywa się dzieło Staszica z 1790 r., w którym ostrzegał przed upadkiem państwa?",
      "options": [
@@ -328,7 +318,7 @@
    "address": "ul. Kochanowskiego 14",
    "lat": 50.8534592,
    "lng": 20.6302562,
-   "radius": 25,
+   "radius": 50,
    "placeCode": "BUFFON",
    "story": "Staszic studiował w Paryżu i poznał tam najsłynniejszych przyrodników epoki. To od nich nauczył się patrzeć na góry jak na księgę historii Ziemi.",
    "tasks": [
@@ -337,7 +327,6 @@
      "kind": "answer",
      "mode": "both",
      "points": 10,
-     "maxAttempts": 3,
      "title": "Oko elewa",
      "text": "Pod portretem Staszica biegnie złota wstęga z nazwą „Staropolski Okręg Przemysłowy”. Pod nią, w owalnych medalionach, namalowano zakłady i budynki dawnego zagłębia. Ile jest tych medalionów? Podajcie liczbę.",
      "answers": [
@@ -357,7 +346,6 @@
      "kind": "choice",
      "mode": "both",
      "points": 10,
-     "maxAttempts": 1,
      "title": "Paryski mistrz",
      "text": "Staszic przetłumaczył na polski „Epoki natury” słynnego francuskiego przyrodnika. Kto był autorem?",
      "options": [
@@ -383,7 +371,7 @@
    "address": "al. Tysiąclecia Państwa Polskiego 7",
    "lat": 50.8787637,
    "lng": 20.6400276,
-   "radius": 25,
+   "radius": 50,
    "placeCode": "GORNIK",
    "story": "Kieleckie studia techniczne mają ponad 200 lat tradycji. Dziś Staszic patrzy na studentów politechniki, następców pierwszych elewów.",
    "tasks": [
@@ -392,7 +380,6 @@
      "kind": "answer",
      "mode": "both",
      "points": 10,
-     "maxAttempts": 3,
      "title": "Oko elewa",
      "text": "Staszic z brązu opiera się na lasce, a u jego stóp rzeźbiarz umieścił część maszyny, symbol przemysłu, który budował w Zagłębiu Staropolskim. Co to za element? Wystarczy jedno słowo.",
      "answers": [
@@ -412,7 +399,6 @@
      "kind": "answer",
      "mode": "both",
      "points": 10,
-     "maxAttempts": 3,
      "title": "Uczelnia imienia Staszica",
      "text": "Która krakowska uczelnia techniczna nosi imię Stanisława Staszica? Wystarczy skrót.",
      "answers": [
@@ -439,7 +425,7 @@
    "address": "Kielecka Fabryka Pomp „Białogon”, ul. Druckiego-Lubeckiego",
    "lat": 50.8544616,
    "lng": 20.5522012,
-   "radius": 100,
+   "radius": 50,
    "placeCode": "HUTA",
    "story": "Z inicjatywy Staszica w Białogonie powstał zakład hutniczy przetapiający rudy miedzi i ołowiu z okolic Kielc. Dziś działa tu fabryka pomp. To jedno z miejsc, gdzie plan Staszica zamienił się w przemysł.",
    "tasks": [
@@ -448,7 +434,6 @@
      "kind": "choice",
      "mode": "both",
      "points": 10,
-     "maxAttempts": 1,
      "title": "Imię huty",
      "text": "Hutę w Białogonie nazwano na cześć ówczesnego władcy Królestwa Polskiego. Którego?",
      "options": [
@@ -474,7 +459,7 @@
    "address": "ul. Jagiellońska",
    "lat": 50.867,
    "lng": 20.615,
-   "radius": 150,
+   "radius": 50,
    "placeCode": "KOPERNIK",
    "story": "Staszic wydawał własne pieniądze na naukę i oświatę. To on ufundował jeden z najsłynniejszych pomników w Warszawie.",
    "tasks": [
@@ -483,7 +468,6 @@
      "kind": "answer",
      "mode": "both",
      "points": 10,
-     "maxAttempts": 3,
      "title": "Oko elewa",
      "text": "Przyjrzyjcie się piersi Staszica na popiersiu. Po prawej stronie surduta rzeźbiarz umieścił odznaczenie, które Staszic otrzymał za zasługi dla kraju. Jaki kształt ma ten order? Jedno słowo.",
      "answers": [
@@ -502,7 +486,6 @@
      "kind": "choice",
      "mode": "both",
      "points": 10,
-     "maxAttempts": 1,
      "title": "Fundator pomnika",
      "text": "Pomnik którego wielkiego uczonego w Warszawie ufundował Stanisław Staszic?",
      "options": [

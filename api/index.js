@@ -67,7 +67,7 @@ function findTask(id) {
   return null;
 }
 const hintCost = (task, used) => (task.hints || []).slice(0, used).reduce((s, h) => s + (parseInt(h.cost, 10) || 0), 0);
-const maxAttempts = t => (t.maxAttempts !== undefined ? parseInt(t.maxAttempts, 10) : 3);
+const maxAttempts = () => 9999;
 const isObj = v => v && typeof v === 'object' && !Array.isArray(v);
 
 function hashPassword(pw) { const salt = crypto.randomBytes(16).toString('hex'); return 'scrypt$' + salt + '$' + crypto.scryptSync(pw, salt, 32).toString('hex'); }
@@ -341,7 +341,7 @@ async function teamAction(action, req, b) {
     if (ok) { st.correct = true; st.at = nowIso(); }
     t.tasks[task.id] = st;
     const left = maxA - st.attempts;
-    out = { ok, message: ok ? `Dobra odpowiedź! +${Math.max(0, (parseInt(task.points, 10) || 0) - hintCost(task, st.hints))} pkt` : (left > 0 ? `Niestety, to nie to. Zostało prób: ${left}.` : 'Niestety, to nie to. To była ostatnia próba.') };
+    out = { ok, message: ok ? `Dobra odpowiedź! +${Math.max(0, (parseInt(task.points, 10) || 0) - hintCost(task, st.hints))} pkt` : 'Niestety, to nie to. Spróbujcie jeszcze raz.' };
     return t;
   });
   if (action === 'answer' && out.ok !== undefined) log(out.ok ? 'answer-ok' : 'answer-bad', tm.id, { task: task.id, a: given });
