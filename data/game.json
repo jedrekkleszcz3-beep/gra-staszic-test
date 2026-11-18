@@ -233,10 +233,10 @@
      "title": "Oko elewa",
      "text": "Stańcie przed główną fasadą pałacu. Ile wież ma pałac? Podajcie liczbę.",
      "answers": [
-      "__UZUPELNIJ__"
+      "4",
+      "cztery"
      ],
      "match": "exact",
-     "todo": true,
      "hints": [
       {
        "text": "Obejdźcie dziedziniec i spójrzcie na narożniki.",
