@@ -339,15 +339,15 @@
      "points": 10,
      "maxAttempts": 3,
      "title": "Oko elewa",
-     "text": "Jaki napis (lub jaki rok) widnieje na muralu? Wpiszcie go dokładnie.",
+     "text": "Pod portretem Staszica biegnie złota wstęga z nazwą „Staropolski Okręg Przemysłowy”. Pod nią, w owalnych medalionach, namalowano zakłady i budynki dawnego zagłębia. Ile jest tych medalionów? Podajcie liczbę.",
      "answers": [
-      "__UZUPELNIJ__"
+      "4",
+      "cztery"
      ],
-     "match": "contains",
-     "todo": true,
+     "match": "exact",
      "hints": [
       {
-       "text": "Szukajcie w dolnej części muralu.",
+       "text": "Policzcie małe owalne obrazki z budynkami tuż pod złotą wstęgą.",
        "cost": 3
       }
      ]
