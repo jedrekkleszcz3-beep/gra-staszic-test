@@ -35,6 +35,8 @@ async function loadGame() {
     const at = mz && (mz.tasks || []).find(t => t.kind === 'animator');
     if (at && /czterema|7–8/.test(at.text || '')) { at.text = at.text.replace('czterema opisami', 'sześcioma opisami').replace('(7–8 pkt za każdy poprawny minerał, za komplet 30 pkt)', '(5 pkt za każdy poprawny minerał, maksymalnie 30 pkt)'); ch = true; }
     if (GAME.settings && GAME.settings.minTeamSize !== 1) { GAME.settings.minTeamSize = 1; ch = true; }
+    const ANIM = {"muzeum": {"text": "Staszic potrzebuje pomocy w rozpoznaniu surowców niezbędnych do rozwoju przemysłu. Zostajecie młodymi geologami! Dopasujcie sześć minerałów do odpowiednich nazw. Punkty przyzna animator (5 pkt za każdy prawidłowo dopasowany minerał, maksymalnie 30 pkt).", "points": 30}, "sienkiewicza": {"text": "W miejscu dawnej szkoły imienia Staszica czeka was egzamin z umiejętności przyszłych odkrywców i inżynierów. Trzy zadania na czas: wymieńcie trzy dziedziny, którymi zajmował się Staszic; wskażcie północ na kompasie; wymieńcie trzy wynalazki lub rozwiązania techniczne, które ułatwiają ludziom życie. Punkty przyzna animator (10 pkt za każde zadanie wykonane w mniej niż 10 sekund).", "points": 30}, "pttk": {"text": "Staszic przygotowuje plan rozwoju przemysłu. Przypasujcie nazwy miejsc do ich przeznaczenia i do zdjęć. Punkty przyzna animator (6 pkt za każdy prawidłowo ułożony ciąg: miejsce – przeznaczenie – zdjęcie).", "points": 36}};
+    for (const p of GAME.points || []) { const a = ANIM[p.id]; const t = a && (p.tasks || []).find(x => x.kind === 'animator'); if (t && (t.text !== a.text || t.points !== a.points)) { t.text = a.text; t.points = a.points; ch = true; } }
     if (ch) await saveGame(GAME);
     return;
   }

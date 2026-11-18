@@ -41,7 +41,7 @@
      "mode": "event",
      "points": 30,
      "title": "Tajemnice minerałów",
-     "text": "Staszic potrzebuje pomocy w rozpoznaniu surowców niezbędnych do rozwoju przemysłu. Zostajecie młodymi geologami! Dostaniecie kartkę z sześcioma opisami minerałów: dopasujcie każdy do nazwy minerału i metalu, który się z niego pozyskuje. Punkty przyzna animator (5 pkt za każdy poprawny minerał, maksymalnie 30 pkt)."
+     "text": "Staszic potrzebuje pomocy w rozpoznaniu surowców niezbędnych do rozwoju przemysłu. Zostajecie młodymi geologami! Dopasujcie sześć minerałów do odpowiednich nazw. Punkty przyzna animator (5 pkt za każdy prawidłowo dopasowany minerał, maksymalnie 30 pkt)."
     }
    ],
    "coordSource": "przybliżone – sprawdzić na miejscu"
@@ -63,7 +63,7 @@
      "mode": "event",
      "points": 30,
      "title": "Egzamin młodego Staszica",
-     "text": "W miejscu dawnej szkoły imienia Staszica czeka was egzamin z umiejętności przyszłych odkrywców i inżynierów. Macie 90 sekund na trzy wyzwania: wiedza, orientacja w terenie i kreatywność. Punkty przyzna animator (do 10 pkt za każde wyzwanie)."
+     "text": "W miejscu dawnej szkoły imienia Staszica czeka was egzamin z umiejętności przyszłych odkrywców i inżynierów. Trzy zadania na czas: wymieńcie trzy dziedziny, którymi zajmował się Staszic; wskażcie północ na kompasie; wymieńcie trzy wynalazki lub rozwiązania techniczne, które ułatwiają ludziom życie. Punkty przyzna animator (10 pkt za każde zadanie wykonane w mniej niż 10 sekund)."
     }
    ],
    "coordSource": "przybliżone – sprawdzić na miejscu"
@@ -83,9 +83,9 @@
      "id": "pttk-a",
      "kind": "animator",
      "mode": "event",
-     "points": 30,
+     "points": 36,
      "title": "Przemysłowe pary",
-     "text": "Staszic przygotowuje plan rozwoju przemysłu. Na stole leży 12 karteczek: sześć z nazwami miejsc i sześć z surowcami lub zakładami. Połączcie je w pary. Punkty przyzna animator (5 pkt za każdą prawidłową parę)."
+     "text": "Staszic przygotowuje plan rozwoju przemysłu. Przypasujcie nazwy miejsc do ich przeznaczenia i do zdjęć. Punkty przyzna animator (6 pkt za każdy prawidłowo ułożony ciąg: miejsce – przeznaczenie – zdjęcie)."
     }
    ],
    "coordSource": "przybliżone – sprawdzić na miejscu"
