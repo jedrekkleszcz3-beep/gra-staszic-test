@@ -31,6 +31,9 @@ async function loadGame() {
     // punkty z animatorami: tylko zadanie animatora, bez pytań wiedzowych (20.11)
     let ch = false;
     for (const p of GAME.points || []) if (['muzeum', 'sienkiewicza', 'pttk'].includes(p.id) && (p.tasks || []).some(t => t.kind !== 'animator')) { p.tasks = p.tasks.filter(t => t.kind === 'animator'); ch = true; }
+    const mz = (GAME.points || []).find(p => p.id === 'muzeum');
+    const at = mz && (mz.tasks || []).find(t => t.kind === 'animator');
+    if (at && /czterema|7–8/.test(at.text || '')) { at.text = at.text.replace('czterema opisami', 'sześcioma opisami').replace('(7–8 pkt za każdy poprawny minerał, za komplet 30 pkt)', '(5 pkt za każdy poprawny minerał, maksymalnie 30 pkt)'); ch = true; }
     if (ch) await saveGame(GAME);
     return;
   }
