@@ -131,3 +131,4 @@
 .gs-app .gs-footer .gs-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 28px;margin-bottom:14px}
 .gs-app .gs-footer img{display:block;max-width:100%;height:auto}
 .gs-app .gs-footer .gs-l-kielce{width:150px}.gs-app .gs-footer .gs-l-stow{width:240px}.gs-app .gs-footer .gs-l-belka{width:100%;max-width:640px;margin:0 auto}
+.gs-app .gs-footer .gs-l-woj{height:78px;width:auto}.gs-app .gs-footer .gs-l-mar,.gs-app .gs-footer .gs-l-kielce{height:56px;width:auto}
