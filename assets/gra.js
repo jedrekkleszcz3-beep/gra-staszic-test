@@ -43,6 +43,7 @@ function renderWelcome(view = 'reg', note = '') {
       <li>Drużyny od 1 do ${s.maxTeamSize} osób. Startujecie, kiedy chcecie${s.mode === 'event' ? ', a na przejście trasy macie ' + s.teamTimeLimitMin + ' min' : ''}.</li>
       <li>Do ukończenia gry potrzeba: <b>wszystkich punktów z animatorem</b> oraz <b>${s.requiredSelfPoints} z ${PUB.points.filter(p => p.category !== 'obslugiwany').length} punktów samodzielnych</b>. Kolejne punkty to dodatkowe punkty do rankingu.</li>
       <li>Obecność w miejscu potwierdzacie GPS-em telefonu (+${s.checkinPoints} pkt). Potem pokażą się zadania.</li>
+      <li><b>Przejście gry zajmie maksymalnie ok. 1,5 godziny.</b> Grę można realizować w piątek 20.11 między 12:00 a 16:00.</li>
       <li><b>Rozstrzygnięcie gry: o 16:30 w PTTK / Informacji Turystycznej, plac Artystów.</b> Zapraszamy wszystkie drużyny!</li>
       <li>Podpowiedź kosztuje punkty. Za ukończenie gry: +${s.finishBonus} pkt. Przy remisie wygrywa krótszy czas.</li>
     </ul>
